@@ -1,0 +1,251 @@
+[gd_scene load_steps=25 format=3 uid="uid://cu2yvo062sew8"]
+
+[ext_resource type="Texture2D" uid="uid://mkyucm70xnfn" path="res://Rocky Roads/Rocky Roads/Backgrounds/clouds.png" id="1_afps1"]
+[ext_resource type="Texture2D" uid="uid://cwjy4mtk7l1sc" path="res://Rocky Roads/Rocky Roads/Tilesets/tileset_forest.png" id="1_n4hpp"]
+[ext_resource type="PackedScene" uid="uid://cs1ujqkdtinfs" path="res://Scenes/Player.tscn" id="2_j2p4l"]
+[ext_resource type="Texture2D" uid="uid://csu72c1aetiyv" path="res://Rocky Roads/Rocky Roads/Backgrounds/mountains_a.png" id="2_p3k1l"]
+[ext_resource type="Texture2D" uid="uid://6ntu6h51s7m6" path="res://Rocky Roads/Rocky Roads/Deco/clouds.png" id="4_lfiui"]
+[ext_resource type="Texture2D" uid="uid://shaib7vgviuf" path="res://Rocky Roads/Rocky Roads/Deco/bush.png" id="6_ta33r"]
+[ext_resource type="PackedScene" uid="uid://bgn7lkjr7s3f7" path="res://Scenes/coin.tscn" id="7_00mb4"]
+[ext_resource type="Texture2D" uid="uid://hj6mc5es6lje" path="res://Rocky Roads/Rocky Roads/Objects/coin_gold.png" id="8_6m31c"]
+[ext_resource type="PackedScene" uid="uid://dv6d4mye5n7a0" path="res://Scenes/Pausa.tscn" id="10_ajsmm"]
+[ext_resource type="Texture2D" uid="uid://d28t15xycnpek" path="res://Rocky Roads/Rocky Roads/Objects/heart.png" id="10_cil33"]
+[ext_resource type="Script" path="res://Scripts/Deathzone.gd" id="10_mrym3"]
+[ext_resource type="Texture2D" uid="uid://cmn4wgmggs7ss" path="res://Rocky Roads/Rocky Roads/Enemies/spikes.png" id="11_pw8il"]
+[ext_resource type="Script" path="res://Scripts/UI.gd" id="12_1sqh5"]
+[ext_resource type="PackedScene" uid="uid://de6i6pr63yubu" path="res://Scenes/Saw.tscn" id="12_l3k88"]
+[ext_resource type="PackedScene" uid="uid://cghatvcpuxna4" path="res://Scenes/Enemy.tscn" id="13_1ae5l"]
+
+[sub_resource type="Gradient" id="Gradient_7q12o"]
+offsets = PackedFloat32Array(0.590909)
+colors = PackedColorArray(0.0913376, 0.465046, 0.899888, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gnw6p"]
+gradient = SubResource("Gradient_7q12o")
+metadata/_snap_enabled = true
+metadata/_snap_count = 2
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tdhcp"]
+texture = ExtResource("1_n4hpp")
+3:0/0 = 0
+5:0/0 = 0
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:3/0 = 0
+8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:3/0 = 0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:3/0 = 0
+10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y24tw"]
+texture = ExtResource("4_lfiui")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yqcyt"]
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_tdhcp")
+sources/3 = SubResource("TileSetAtlasSource_y24tw")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5wxa"]
+bg_color = Color(1, 1, 1, 0.647059)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmrfj"]
+size = Vector2(390, 22)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jumm4"]
+texture = ExtResource("11_pw8il")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.6875, -5.5, 0.0625, 3.125, 3.4375, -5.25, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.5625, -2.375, 0.1875, 4.5, 3.3125, -2.25, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.5625, 0.625, -0.3125, 6.125, 3.6875, 1.125, 8, 8, -8, 8)
+3:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2skrx"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_jumm4")
+
+[node name="Mundo1" type="Node2D"]
+position = Vector2(307, 311)
+
+[node name="Sky" type="Sprite2D" parent="."]
+position = Vector2(3, -47)
+scale = Vector2(6.07129, 3.56313)
+texture = SubResource("GradientTexture2D_gnw6p")
+
+[node name="Clouds" type="Sprite2D" parent="."]
+position = Vector2(1, -97)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_afps1")
+
+[node name="MountainsA" type="Sprite2D" parent="."]
+position = Vector2(9.65595e-06, -29)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_p3k1l")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_yqcyt")
+format = 2
+layer_0/tile_data = PackedInt32Array(131070, 131074, 1, 196605, 196610, 1, 196604, 196610, 1, 196603, 65538, 2, 262139, 65538, 3, 327675, 65538, 3, 131068, 131074, 0, 65534, 131074, 0, 65537, 327682, 1, 131071, 262146, 1, 65536, 262146, 1, 196606, 131074, 2, 262142, 262146, 3, 196607, 262146, 3, 262143, 262146, 2, 131072, 262146, 2, 196608, 196610, 3, 131073, 327682, 2, 196609, 262146, 3, 327678, 196610, 2, 327679, 131074, 3, 262144, 262146, 3, 262145, 262146, 2, 262140, 131074, 3, 262141, 131074, 3, 327676, 262146, 3, 327677, 262146, 3, 393211, 65538, 3, 393212, 262146, 3, 393213, 196610, 2, 393214, 262146, 3, 393215, 262146, 3, 327680, 196610, 3, 327681, 131074, 3, 327682, 262146, 3, 196610, 262146, 3, 262146, 327682, 3, 131074, 262146, 1, 131076, 327682, 1, 131078, 589826, 3, 131075, 262146, 1, 262150, 393218, 2, 327686, 393218, 3, 262152, 524290, 1, 65540, 393218, 1, 1, 393218, 1, 262149, 262146, 1, -262155, 3, 2, -262154, 65539, 2, -262153, 65539, 2, -262152, 131075, 2, -262151, 196611, 2, -196615, 3, 1, -196614, 65539, 1, -196613, 131075, 1, 196611, 196610, 2, 196612, 393218, 3, 262148, 327682, 2, 262147, 131074, 3, 327684, 262146, 3, 393220, 131074, 4, 393219, 327682, 4, 393221, 196610, 4, 327685, 131074, 3, 393218, 262146, 4, 458747, 65538, 4, 458748, 131074, 4, 458749, 196610, 4, 458750, 262146, 4, 458751, 327682, 4, 393216, 131074, 4, 393217, 196610, 4, 393222, 393218, 4, 327683, 262146, 3, 131077, 524290, 3, 131079, 655362, 3, 131080, 524290, 3, 131081, 589826, 3, 131082, 655362, 3, 131083, 524290, 3, 131084, 589826, 3, 131085, 655362, 3, 131086, 524290, 3, 131087, 589826, 3, 131088, 655362, 3, 131089, 524290, 3, 131090, 589826, 3, 131091, 655362, 3, 131092, 524290, 3, 131093, 589826, 3, 131094, 655362, 3, 131095, 524290, 3, 131096, 589826, 3, 131097, 655362, 3, 131098, 524290, 3, 131099, 589826, 3, 131100, 655362, 3, 131101, 524290, 3, 131102, 524290, 3, 131103, 589826, 3, 131104, 655362, 3, 131105, 524290, 3, 131106, 589826, 3, 131107, 655362, 3, 131108, 524290, 3, 131109, 589826, 3, 131110, 655362, 3, 131111, 524290, 3, 131112, 589826, 3, 131113, 655362, 3, 131114, 524290, 3, 131115, 589826, 3, 131116, 655362, 3, 131117, 524290, 3, 131118, 589826, 3, 131119, 655362, 3, 131120, 524290, 3, 131121, 589826, 3, 131122, 655362, 3, 131123, 524290, 3, 131124, 589826, 3, 131125, 655362, 3, 131126, 524290, 3, 131127, 589826, 3, 131128, 655362, 3, 131129, 524290, 3, 131130, 589826, 3, 131131, 655362, 3, 131132, 524290, 3, 131133, 589826, 3, 131134, 655362, 3, 131135, 524290, 3, 131136, 589826, 3, 131137, 655362, 3, 131138, 524290, 3, 131139, 589826, 3, 131140, 655362, 3, 131141, 524290, 3, 131142, 589826, 3, 131143, 655362, 3, 131144, 524290, 3)
+metadata/_edit_lock_ = true
+
+[node name="Bush" type="Sprite2D" parent="."]
+position = Vector2(48, 24)
+texture = ExtResource("6_ta33r")
+
+[node name="Player" parent="." instance=ExtResource("2_j2p4l")]
+position = Vector2(-69, 15)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(3, 3)
+
+[node name="Coins" type="Node2D" parent="."]
+position = Vector2(56, 8)
+
+[node name="Coin" parent="Coins" instance=ExtResource("7_00mb4")]
+position = Vector2(-4, 18)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("7_00mb4")]
+position = Vector2(-31, -30)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("7_00mb4")]
+position = Vector2(-106, 7)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+offset = Vector2(600, 350)
+scale = Vector2(3.14, 3.14)
+transform = Transform2D(3.14, 0, 0, 3.14, 600, 350)
+script = ExtResource("12_1sqh5")
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = -174.0
+offset_top = -100.0
+offset_right = -133.0
+offset_bottom = -80.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i5wxa")
+metadata/_edit_use_anchors_ = true
+
+[node name="dots" type="Label" parent="CanvasLayer"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -159.0
+offset_top = -103.0
+offset_right = -119.0
+offset_bottom = -80.0
+text = ":"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(-166, -89)
+texture = ExtResource("8_6m31c")
+hframes = 8
+
+[node name="Heart 1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(-120.701, -89.4904)
+texture = ExtResource("10_cil33")
+hframes = 3
+
+[node name="Heart 2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(-107.962, -89.4904)
+texture = ExtResource("10_cil33")
+hframes = 3
+
+[node name="Heart 3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(-94.9044, -89.4904)
+texture = ExtResource("10_cil33")
+hframes = 3
+
+[node name="CoinsCollected" type="Label" parent="CanvasLayer"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -153.0
+offset_top = -101.0
+offset_right = -113.0
+offset_bottom = -78.0
+text = "00"
+metadata/_edit_use_anchors_ = true
+
+[node name="Pausa" parent="CanvasLayer" instance=ExtResource("10_ajsmm")]
+process_mode = 3
+visible = false
+offset_left = -577.388
+offset_top = -309.236
+offset_right = -577.388
+offset_bottom = -309.236
+
+[node name="Deathzone" type="Area2D" parent="."]
+script = ExtResource("10_mrym3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzone"]
+position = Vector2(1, 97)
+shape = SubResource("RectangleShape2D_dmrfj")
+debug_color = Color(0.0823529, 0.560784, 0.87451, 0.419608)
+
+[node name="Spike" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_2skrx")
+format = 2
+layer_0/tile_data = PackedInt32Array(65541, 0, 0, 65542, 0, 0)
+
+[node name="Node2D" parent="." instance=ExtResource("12_l3k88")]
+position = Vector2(63, -14)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("13_1ae5l")]
+position = Vector2(9, -20)
+
+[connection signal="got_hit" from="Player" to="CanvasLayer" method="_on_player_got_hit"]
+[connection signal="ccollected" from="Coins/Coin" to="CanvasLayer" method="_on_coin_ccollected"]
+[connection signal="ccollected" from="Coins/Coin2" to="CanvasLayer" method="_on_coin_ccollected"]
+[connection signal="ccollected" from="Coins/Coin3" to="CanvasLayer" method="_on_coin_ccollected"]
+[connection signal="body_entered" from="Deathzone" to="Deathzone" method="_on_body_entered"]

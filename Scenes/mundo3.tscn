@@ -1,0 +1,230 @@
+[gd_scene load_steps=22 format=3 uid="uid://drniudnih34qm"]
+
+[ext_resource type="Texture2D" uid="uid://mkyucm70xnfn" path="res://Rocky Roads/Rocky Roads/Backgrounds/clouds.png" id="1_ynpw4"]
+[ext_resource type="Texture2D" uid="uid://csu72c1aetiyv" path="res://Rocky Roads/Rocky Roads/Backgrounds/mountains_a.png" id="2_xnf40"]
+[ext_resource type="Texture2D" uid="uid://shaib7vgviuf" path="res://Rocky Roads/Rocky Roads/Deco/bush.png" id="3_rr4w5"]
+[ext_resource type="Texture2D" uid="uid://cwjy4mtk7l1sc" path="res://Rocky Roads/Rocky Roads/Tilesets/tileset_forest.png" id="4_aoxu1"]
+[ext_resource type="Texture2D" uid="uid://6ntu6h51s7m6" path="res://Rocky Roads/Rocky Roads/Deco/clouds.png" id="5_ku2qw"]
+[ext_resource type="PackedScene" uid="uid://cs1ujqkdtinfs" path="res://Scenes/Player.tscn" id="6_hcw5a"]
+[ext_resource type="PackedScene" uid="uid://bgn7lkjr7s3f7" path="res://Scenes/coin.tscn" id="7_wtve5"]
+[ext_resource type="Script" path="res://Scripts/UI.gd" id="8_w3jb3"]
+[ext_resource type="Texture2D" uid="uid://hj6mc5es6lje" path="res://Rocky Roads/Rocky Roads/Objects/coin_gold.png" id="9_j7fk1"]
+[ext_resource type="Script" path="res://Scripts/Deathzone.gd" id="10_lqimb"]
+[ext_resource type="Texture2D" uid="uid://blvwlpithcaty" path="res://Rocky Roads/Rocky Roads/Deco/rock.png" id="11_tvdyg"]
+[ext_resource type="Texture2D" uid="uid://dr1x3i1qljfk1" path="res://Rocky Roads/Rocky Roads/Deco/tree.png" id="12_pm8s1"]
+[ext_resource type="PackedScene" uid="uid://dv6d4mye5n7a0" path="res://Scenes/Pausa.tscn" id="13_ud4er"]
+[ext_resource type="Texture2D" uid="uid://d28t15xycnpek" path="res://Rocky Roads/Rocky Roads/Objects/heart.png" id="14_mcudm"]
+
+[sub_resource type="Gradient" id="Gradient_7q12o"]
+offsets = PackedFloat32Array(0.590909)
+colors = PackedColorArray(0.0913376, 0.465046, 0.899888, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gnw6p"]
+gradient = SubResource("Gradient_7q12o")
+metadata/_snap_enabled = true
+metadata/_snap_count = 2
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tdhcp"]
+texture = ExtResource("4_aoxu1")
+3:0/0 = 0
+5:0/0 = 0
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:3/0 = 0
+8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:3/0 = 0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:3/0 = 0
+10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y24tw"]
+texture = ExtResource("5_ku2qw")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yqcyt"]
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_tdhcp")
+sources/3 = SubResource("TileSetAtlasSource_y24tw")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmrfj"]
+size = Vector2(636, 22)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rw3r3"]
+bg_color = Color(1, 1, 1, 0.647059)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Mundo3" type="Node2D"]
+
+[node name="Sky" type="Sprite2D" parent="."]
+position = Vector2(3, -47)
+scale = Vector2(6.07129, 3.56313)
+texture = SubResource("GradientTexture2D_gnw6p")
+
+[node name="Clouds" type="Sprite2D" parent="."]
+position = Vector2(1, -97)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_ynpw4")
+
+[node name="MountainsA" type="Sprite2D" parent="."]
+position = Vector2(9.65595e-06, -29)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_xnf40")
+
+[node name="Bush" type="Sprite2D" parent="."]
+position = Vector2(48, 24)
+texture = ExtResource("3_rr4w5")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_yqcyt")
+format = 2
+layer_0/tile_data = PackedInt32Array(-262155, 3, 2, -262154, 65539, 2, -262153, 65539, 2, -262152, 131075, 2, -262151, 196611, 2, -196615, 3, 1, -196614, 65539, 1, -196613, 131075, 1, 196597, 524290, 3, 196598, 589826, 3, 196599, 65538, 2, 196600, 131074, 2, 196601, 196610, 2, 196602, 262146, 3, 131064, 131074, 1, 131065, 196610, 1, 131066, 196610, 1, 131067, 131074, 2, 131068, 262146, 2, 131069, 196610, 2, 65531, 131074, 1, 65532, 196610, 1, 65533, 262146, 1, 65534, 196610, 1, 65535, 262146, 1, 0, 327682, 1, 131070, 262146, 3, 131071, 196610, 2, 65536, 393218, 3, 196606, 262146, 3, 196607, 262146, 3, 131072, 327682, 2, 131073, 196610, 1, 131074, 262146, 1, 131075, 196610, 1, 131076, 262146, 1, 131077, 196610, 1, 131078, 327682, 1, 196614, 327682, 2, 196615, 589826, 3, 196616, 655362, 3, 262137, 196610, 3, 262138, 262146, 3, 196603, 262146, 3, 262139, 262146, 3, 196604, 262146, 3, 262140, 262146, 3, 196605, 196610, 3, 262141, 262146, 3, 262142, 262146, 3, 262143, 196610, 3, 196608, 262146, 3, 196609, 196610, 2, 262145, 262146, 3, 196610, 262146, 3, 262146, 262146, 3, 196611, 262146, 3, 262147, 196610, 2, 196612, 262146, 3, 262148, 262146, 3, 196613, 196610, 2, 262149, 262146, 3, 262150, 262146, 3, 262151, 262146, 3, 327687, 262146, 3, 262152, 262146, 3, 327688, 262146, 3, 327685, 262146, 3, 327686, 262146, 3, 327683, 196610, 3, 327684, 262146, 3, 327681, 262146, 3, 327682, 262146, 3, 327679, 262146, 3, 393215, 262146, 3, 262144, 262146, 3, 327680, 262146, 3, 327677, 262146, 3, 393213, 262146, 3, 327678, 262146, 3, 393214, 262146, 3, 327675, 262146, 3, 393211, 262146, 3, 327676, 262146, 3, 393212, 262146, 3, 262136, 262146, 3, 327672, 196610, 2, 393208, 196610, 3, 327673, 262146, 2, 393209, 262146, 3, 327674, 262146, 3, 393210, 262146, 3, 327671, 65538, 3, 393207, 65538, 3, 262135, 65538, 3, 65530, 131074, 0, 131061, 131074, 0, 131079, 131074, 0, 65540, 393218, 1, 65539, 393218, 1, -1, 393218, 1, 65528, 393218, 1)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("6_hcw5a")]
+position = Vector2(-44, -16)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(44, 16)
+zoom = Vector2(3, 3)
+
+[node name="Coins" type="Node2D" parent="."]
+position = Vector2(56, 8)
+
+[node name="Coin" parent="Coins" instance=ExtResource("7_wtve5")]
+position = Vector2(117, 2)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("7_wtve5")]
+position = Vector2(-212, -2)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("7_wtve5")]
+position = Vector2(-31, -33)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("10_lqimb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(51, 97)
+shape = SubResource("RectangleShape2D_dmrfj")
+debug_color = Color(0.0823529, 0.560784, 0.87451, 0.419608)
+
+[node name="Rock" type="Sprite2D" parent="."]
+position = Vector2(-136, 24)
+texture = ExtResource("11_tvdyg")
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(-21, -24)
+texture = ExtResource("12_pm8s1")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+offset = Vector2(600, 350)
+scale = Vector2(3.14, 3.14)
+transform = Transform2D(3.14, 0, 0, 3.14, 600, 350)
+script = ExtResource("8_w3jb3")
+
+[node name="Panel" type="Panel" parent="CanvasLayer2"]
+offset_left = -174.0
+offset_top = -100.0
+offset_right = -133.0
+offset_bottom = -80.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rw3r3")
+
+[node name="dots" type="Label" parent="CanvasLayer2"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -159.0
+offset_top = -103.0
+offset_right = -119.0
+offset_bottom = -80.0
+text = ":"
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer2"]
+position = Vector2(-166, -89)
+texture = ExtResource("9_j7fk1")
+hframes = 8
+
+[node name="CoinsCollected" type="Label" parent="CanvasLayer2"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -153.0
+offset_top = -101.0
+offset_right = -113.0
+offset_bottom = -78.0
+text = "00"
+
+[node name="Pausa" parent="CanvasLayer2" instance=ExtResource("13_ud4er")]
+process_mode = 3
+visible = false
+offset_left = -577.388
+offset_top = -309.236
+offset_right = -577.388
+offset_bottom = -309.236
+
+[node name="Heart 1" type="Sprite2D" parent="CanvasLayer2"]
+position = Vector2(-120.701, -89.4904)
+texture = ExtResource("14_mcudm")
+hframes = 3
+
+[node name="Heart 2" type="Sprite2D" parent="CanvasLayer2"]
+position = Vector2(-107.962, -89.4904)
+texture = ExtResource("14_mcudm")
+hframes = 3
+
+[node name="Heart 3" type="Sprite2D" parent="CanvasLayer2"]
+position = Vector2(-94.9044, -89.4904)
+texture = ExtResource("14_mcudm")
+hframes = 3
+
+[connection signal="got_hit" from="Player" to="CanvasLayer2" method="_on_player_got_hit"]
+[connection signal="ccollected" from="Coins/Coin" to="CanvasLayer2" method="_on_coin_ccollected"]
+[connection signal="ccollected" from="Coins/Coin2" to="CanvasLayer2" method="_on_coin_ccollected"]
+[connection signal="ccollected" from="Coins/Coin3" to="CanvasLayer2" method="_on_coin_ccollected"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
